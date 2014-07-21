@@ -10,7 +10,9 @@ if (Test-Path $github_path)
 }
 
 function git-cleanup {
-	Invoke-Expression (join-path "$profile_dir" "git-cleanup.ps1")
+	$cmd = (join-path "$profile_dir" "git-cleanup.ps1")
+	$expression = "'$cmd'"
+	Invoke-Expression  "& $expression"
 }
 
 function mklink {     
