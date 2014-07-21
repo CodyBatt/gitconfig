@@ -1,0 +1,23 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/Shortcut/@EntryValue">rx-vmprop</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/Text/@EntryValue">#region Property $PropName$&#xD;
+private $PropType$ _$PrivatePropName$ = default($PropType$);&#xD;
+public $PropType$ $PropName$&#xD;
+{&#xD;
+    get { return _$PrivatePropName$; }&#xD;
+    set { this.RaiseAndSetIfChanged(ref _$PrivatePropName$, value); }&#xD;
+}&#xD;
+#endregion</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/Scope/=139FF4CE89E7094686FDA7BF5FFBBE92/Type/@EntryValue">Everywhere</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/Field/=PropName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/Field/=PropName/InitialRange/@EntryValue">1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/Field/=PropName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/Field/=PropType/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/Field/=PropType/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/Field/=PrivatePropName/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/Field/=PrivatePropName/Expression/@EntryValue">decapitalize(PropName)</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/Field/=PrivatePropName/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=01AA53053D57E140B9A3398F9E67A514/Field/=PrivatePropName/Order/@EntryValue">2</s:Int64></wpf:ResourceDictionary>
