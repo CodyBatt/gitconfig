@@ -32,7 +32,20 @@ function Undo-LastGitCommit {
     echo "Reverted and unstaged last commit."
 }
 
+function Switch-GitKey($key) {
+	Stop-SshAgent
+	Start-SshAgent
+	Add-SshKey (join-path $env:USERPROFILE ".ssh\$key")
+	Add-SshKey -l	
+	$result = & "ssh" -T git@github.com 2>&1
+	$result -replace "Hi (.*)!.*", "Switched to: `$1"
+}
+
+function Show-GitKey {
+	dir (join-path $env:USERPROFILE ".ssh\*_rsa") | %{$_.Name}
+}
+
 set-alias git-clean Clear-OldGitBranches 
 set-alias git-undo  Undo-LastGitCommit
 
-Export-ModuleMember -Function Clear-OldGitBranches, Undo-LastGitCommit, mklink, Reset-Nuget -Alias git-clean, git-undo
+Export-ModuleMember -Function Switch-GitKey, Show-GitKey, Clear-OldGitBranches, Undo-LastGitCommit, mklink, Reset-Nuget -Alias git-clean, git-undo
