@@ -26,3 +26,19 @@ import-module csb-util
 echo "Installed csb-util: "
 get-command -module csb-util
 
+# Make CD work like Unix
+function ChangeDirectory ($Path) {
+    if($Path -eq "-") {
+        Pop-Location
+    }
+    elseif ($Path) {
+        Push-Location $Path
+    }
+    else { 
+        Push-Location
+    }
+}
+
+try{ $PSDefaultParameterValues.Add("Push-Location:Path", $env:HOME) } catch{}
+Remove-Item alias:cd
+set-alias cd ChangeDirectory -Option AllScope
