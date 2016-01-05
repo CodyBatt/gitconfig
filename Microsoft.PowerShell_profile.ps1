@@ -1,13 +1,14 @@
 
 $profile_dir = Split-Path -parent $profile
 $github_path = [System.Environment]::ExpandEnvironmentVariables("%USERPROFILE%\Local Settings\Application Data\GitHub\PORTAB~1\bin\")
-$sublime_path = "C:\Program Files\Sublime Text 2\sublime_text.exe"
+$sublime_path = "C:\Program Files (x86)\Microsoft VS Code\code.exe"
+
+
 
 if( (test-path $sublime_path) )
 {
     set-alias sublime $sublime_path
     set-alias vi sublime
-    set-alias notepad sublime
 }
 else {
     write-warning "Can't find sublime."
@@ -21,6 +22,7 @@ if (Test-Path $github_path)
     $env:PATH += ";" + $github_path
 }
 
+$env:PSModulePath = $env:PSModulePath + ";$PsScriptRoot\modules"
 import-module csb-util
 
 echo "Installed csb-util: "
